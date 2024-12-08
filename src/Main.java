@@ -1,7 +1,4 @@
-
 import java.util.*;
-// Method to calculate depreciation cost (Using straight-line depreciation for simplicity)
-
 public class Main {
     private static double calculateEMI(double principal, double annualInterestRate, int tenureYears) {
         double monthlyInterestRate = annualInterestRate / (12 * 100);
@@ -56,13 +53,15 @@ public class Main {
     double assetAppreciation = calculateAppreciation(homeLoanAmount, loanTenure);
     // Calculate SIP returns
     double sipTotalReturns = calculateSIPReturns(sipMonthlyInvestment, sipReturnRate, loanTenure);
-    // Print results
+
+
     System.out.printf("Home Loan EMI: ₹%.2f\n", emi);
     System.out.printf("Total Interest Paid: ₹%.2f\n", totalInterestPaid);
     System.out.printf("Depreciation Cost: ₹%.2f\n", depreciationCost);
     System.out.printf("Asset Price Appreciation: ₹%.2f\n", assetAppreciation);
     System.out.printf("Total SIP Returns: ₹%.2f\n", sipTotalReturns);
-    // Summary
+
+
     System.out.println("Summary of Calculation:");
     System.out.printf("Total cost of home ownership after %d years: ₹%.2f\n", loanTenure, homeLoanAmount + totalInterestPaid + depreciationCost - assetAppreciation);
     System.out.printf("Total value of SIP investment after %d years: ₹%.2f\n", loanTenure, sipTotalReturns); }
